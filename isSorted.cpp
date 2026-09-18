@@ -53,6 +53,18 @@ void testNegativeValues() {
     assert(isSorted(arr, 5) == true);
 }
 
+// 7a. Additional test case: Empty array.
+void testEmptyArray() {
+    int arr[] = {};
+    assert(isSorted(arr, 0) == true);
+}
+
+// 7b. Additional test case: Array with all identical elements.
+void testAllIdenticalElements() {
+    int arr[] = {7, 7, 7, 7, 7};
+    assert(isSorted(arr, 5) == true);
+}
+
 int main() {
     testSortedArray();
     testUnsortedArray();
@@ -60,6 +72,8 @@ int main() {
     testSingleElement();
     testDescendingArray();
     testNegativeValues();
+    testEmptyArray();
+    testAllIdenticalElements();
 
     cout << "All test cases passed successfully!" << endl;
     return 0;
